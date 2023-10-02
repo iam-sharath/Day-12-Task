@@ -1,0 +1,85 @@
+
+
+.bord{
+ display: flex;
+ margin: 60px;
+}
+.box1,.box2{
+    border:1px groove black;
+    padding: 40px;
+}
+.box1:nth-child(2n+1){
+    background-color: black;
+}
+.box2:nth-child(2n){
+    background-color: black;
+}
+
+
+
+
+@keyframes wheel{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.tyre{
+    animation-name:wheel;
+    animation-duration:.1s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:infinite;
+    position: relative;
+    right:104px;
+    top: -32px;
+}
+
+
+
+
+
+@keyframes wheel2{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+.tyre2{
+    animation-name:wheel2;
+    animation-duration:.1s;
+    animation-fill-mode:forwards;
+    animation-iteration-count:infinite;
+    position: relative;
+    right:534px;
+    top: -37px;
+}
+
+
+
+
+.car{
+    position:relative;
+    left:100px;
+    top: 150px;
+}
+
+
+
+
+
+@keyframes city{
+    100%{
+        transform: translateX(-1400px);
+    }
+}
+.road{
+    position: absolute;
+    left: 0;
+    animation: city 4s linear infinite;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+}
